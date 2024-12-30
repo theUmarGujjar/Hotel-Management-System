@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #F2E4CF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Main Container -->
+    <VBox spacing="30.0" style="-fx-background-color: #F8FAFD; -fx-padding: 20px; -fx-background-color: #F5F5F5;">
+
+        <!-- Banner Section -->
+        <HBox alignment="CENTER_LEFT" prefHeight="79.0" prefWidth="1360.0" style="-fx-background-color: #3C5B6F; -fx-padding: 10px; -fx-background-color: #003366;">
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+                <image>
+                    <Image url="@WhatsApp%20Image%202024-11-29%20at%2021.29.35_a992ea51.jpg" />
+                </image>
+            </ImageView>
+            <Label style="-fx-font-size: 36px; -fx-font-family: Arial; -fx-text-fill: #d3ba6c; -fx-background-color: #003366;" text="LODGIFY">
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin>
+            </Label>
+        </HBox>
+
+        <!-- Left Aligned Section -->
+        <VBox alignment="TOP_LEFT" spacing="20.0" style="-fx-background-color: #FFODF; -fx-padding: 20px; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0.5, 0, 0);">
+
+            <!-- Hotel Receptionist Label -->
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="81.0" prefWidth="235.0" style="-fx-font-size: 24px; -fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-background-radius: 5px; -fx-padding: 10px;" text="Hotel Receptionist" textAlignment="CENTER" />
+
+            <!-- Button Sections Organized into 2 Columns -->
+            <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 10px;">
+                <!-- Column 1 -->
+                <VBox spacing="15.0">
+                    <Button fx:id="available" onAction="#showAvailableRooms" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="Available Rooms" />
+                    <Button fx:id="roomBook" onAction="#bookRoom" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="Room Booking" />
+                    <Button fx:id="checkout" onAction="#checkOut" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="Process Room Checkout" />
+                    <Button fx:id="viewBook" onAction="#viewBookedRooms" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="View Active Bookings" />
+                </VBox>
+
+                <!-- Column 2 -->
+                <VBox spacing="15.0">
+                    <Button fx:id="updateBook" onAction="#updateCustomerDetails" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="Modify Booking Details" />
+                    <Button fx:id="viewHygienic" onAction="#checkHygienicStatus" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="Inspect Room Hygiene" />
+                    <Button fx:id="updateHygienic" onAction="#updateHygienicStatus" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="Update Room Hygiene" />
+                    <Button fx:id="carBook" onAction="#driverPortal" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 16px; -fx-border-radius: 25px;" text="Manage Car Bookings" />
+                </VBox>
+            </HBox>
+
+            <!-- Exit Button -->
+            <Button mnemonicParsing="false" onAction="#exitToDashboard" prefHeight="81.0" prefWidth="235.0" style="-fx-background-color: #D72638; -fx-text-fill: black; -fx-padding: 12px; -fx-font-size: 22px; -fx-border-radius: 25px; -fx-margin-top: 15px;" text="Exit" />
+        </VBox>
+
+    </VBox>
+
+</StackPane>

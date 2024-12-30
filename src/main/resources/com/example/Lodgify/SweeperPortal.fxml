@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #F2E4CF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Main Container -->
+    <VBox spacing="30.0" style="-fx-background-color: #F5F5F5;">
+
+        <!-- Banner Section -->
+        <HBox alignment="CENTER_LEFT" prefHeight="80.0" style="-fx-background-color: #153448; -fx-padding: 10px;">
+            <ImageView fitHeight="70.0" fitWidth="76.0">
+                <image>
+                    <Image url="@WhatsApp%20Image%202024-11-29%20at%2021.29.35_a992ea51.jpg" />
+
+                </image>
+            </ImageView>
+            <Label style="-fx-font-size: 36px; -fx-font-family: Arial; -fx-text-fill: #d3ba6d;" text="LODGIFY">
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin></Label>
+        </HBox>
+
+        <!-- Left Aligned Section -->
+        <VBox alignment="TOP_LEFT" spacing="20.0" style="-fx-background-color: #FFODF;">
+
+            <!-- Buttons Section -->
+            <VBox alignment="TOP_LEFT" prefHeight="476.0" prefWidth="1380.0" spacing="15.0">
+                <Button fx:id="all" onAction="#checkStatusOfAllRooms" prefHeight="54.0" prefWidth="228.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: Black; -fx-padding: 10px;" text="View All Room Hygiene Status" />
+                <Button fx:id="one" onAction="#showDataForOne" prefHeight="52.0" prefWidth="227.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: Black; -fx-padding: 10px;" text="View Hygiene Status by Room Number" />
+                <Button fx:id="update" onAction="#updateStatus" prefHeight="51.0" prefWidth="226.0" style="-fx-background-color: #D6D6D6; -fx-text-fill: Black; -fx-padding: 10px;" text="Update Room Cleaning Status">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+                <Button mnemonicParsing="false" onAction="#exitToStaffPortal" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #D72638;" text="Exit">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <padding>
+               <Insets left="20.0" />
+            </padding>
+            </VBox>
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+        </VBox>
+
+    </VBox>
+
+</StackPane>

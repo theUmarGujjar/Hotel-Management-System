@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Title Section -->
+    <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #003366;">
+        <ImageView fitHeight="77.0" fitWidth="82.0">
+            <image>
+                <Image url="@../WhatsApp%20Image%202024-11-29%20at%2021.29.35_a992ea51.jpg" />
+            </image></ImageView>
+        <Label prefHeight="75.0" prefWidth="1316.0" style="-fx-font-size: 36px; -fx-font-family: Times New Roman; -fx-text-fill: #D3BA6D;" text="LODGIFY" textFill="#d3ba6d">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font></Label>
+    </HBox>
+
+    <!-- Input Section for Size, Price, and Quantity -->
+    <GridPane alignment="CENTER" hgap="30" layoutX="0" layoutY="150" prefWidth="1400.0" vgap="20">
+        <!-- Size Input -->
+        <Label style="-fx-font-size: 18px; -fx-text-fill: #333333;" text="Size:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="sizeField" prefHeight="40.0" prefWidth="300.0" promptText="Enter size (e.g., XL, L, S)" style="-fx-font-size: 18px; -fx-border-radius: 10px; -fx-background-color: #ecf0f1; -fx-border-color: #D6D6D6;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="sizeErrorLabel" style="-fx-text-fill: red; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Price Input -->
+        <Label style="-fx-font-size: 18px; -fx-text-fill: #333333;" text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="priceField" promptText="Enter price" style="-fx-font-size: 18px; -fx-border-radius: 10px; -fx-background-color: #ecf0f1; -fx-border-color: #D6D6D6;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label fx:id="priceErrorLabel" style="-fx-text-fill: red; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <!-- Quantity Input -->
+        <Label style="-fx-font-size: 18px; -fx-text-fill: #333333;" text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="quantityField" promptText="Enter quantity" style="-fx-font-size: 18px; -fx-border-radius: 10px; -fx-background-color: #ecf0f1; -fx-border-color: #D6D6D6;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label fx:id="quantityErrorLabel" style="-fx-text-fill: red; -fx-font-size: 14px;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <!-- Submit Button -->
+    <Button fx:id="submitButton" layoutX="580.0" layoutY="464.0" onAction="#handleSubmitButton" prefHeight="50.0" prefWidth="282.0" style="-fx-font-size: 20px; -fx-padding: 10px; -fx-background-color: #D6D6D6; -fx-text-fill: black; -fx-border-radius: 50px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 5);" text="Submit" />
+
+    <!-- Global Error Message Area -->
+    <Label fx:id="globalErrorLabel" alignment="CENTER" layoutX="537.0" layoutY="557.0" prefHeight="25.0" prefWidth="300.0" style="-fx-text-fill: red; -fx-font-size: 16px;" textAlignment="CENTER" wrapText="true" />
+</AnchorPane>

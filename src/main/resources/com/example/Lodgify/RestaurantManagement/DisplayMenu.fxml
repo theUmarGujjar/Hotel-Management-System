@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="700" prefWidth="1400" scaleShape="false" spacing="20" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #003366;">
+        <ImageView fitHeight="77.0" fitWidth="82.0">
+            <image>
+                <Image url="@../WhatsApp%20Image%202024-11-29%20at%2021.29.35_a992ea51.jpg" />
+            </image></ImageView>
+        <Label prefHeight="75.0" prefWidth="1316.0" style="-fx-font-size: 36px; -fx-font-family: Times New Roman; -fx-text-fill: #D3BA6D;" text="LODGIFY" textFill="#d3ba6d">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font></Label>
+    </HBox>
+
+    <!-- List of items with scrollable behavior -->
+    <ListView fx:id="itemList" onMouseClicked="#handleItemClick" prefHeight="274.0" prefWidth="816.0" style="-fx-background-color: #f9f9f9; /* Light background for a clean look */                      -fx-border-radius: 8; /* Subtle rounded corners */                      -fx-border-color: #ddd; /* Soft border color */                      -fx-border-width: 1; /* Thin border for subtle separation */                      -fx-font-size: 18px; /* Increased font size for better readability */                      -fx-text-fill: #333; /* Dark text color for readability */                      -fx-cell-size: 50px; /* Increased item height */                      -fx-padding: 8px 0; /* Padding inside each item */                      -fx-selection-bar: #c6e7ff; /* Soft blue selection */                      -fx-hover-color: #f0f0f0; /* Light hover effect */">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="12.0" />
+        </padding>
+    </ListView>
+
+    <!-- Placeholder for item details -->
+    <VBox fx:id="detailPane" alignment="TOP_CENTER" prefHeight="221.0" prefWidth="1273.0" spacing="10" style="-fx-background-color: #ffffff; /* White background for clarity */                  -fx-border-radius: 8; /* Rounded corners */                  -fx-padding: 20px; /* Padding inside the detail pane */                  -fx-border-color: #ddd; /* Soft border */                  -fx-border-width: 1; /* Thin border */                  -fx-font-size: 16px; /* Slightly larger font for clarity */                  -fx-text-fill: #333; /* Dark text color */                  -fx-alignment: center; /* Centering text inside the VBox */">
+        <Text fx:id="itemDetailText" text="Click on the item to see its detail" textAlignment="CENTER" wrappingWidth="628.0">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+    </VBox>
+   <Button fx:id="displayBack" mnemonicParsing="false" onAction="#exitToMenu" prefHeight="50.0" prefWidth="233.0" style="-fx-background-color: #D72638;" text="Exit">
+      <VBox.margin>
+         <Insets top="12.0" />
+      </VBox.margin>
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Button>
+
+</VBox>

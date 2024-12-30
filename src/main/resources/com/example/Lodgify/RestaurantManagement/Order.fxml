@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Title Section -->
+    <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #003366;">
+        <ImageView fitHeight="77.0" fitWidth="82.0">
+            <image>
+                <Image url="@../WhatsApp%20Image%202024-11-29%20at%2021.29.35_a992ea51.jpg" />
+            </image></ImageView>
+        <Label prefHeight="75.0" prefWidth="1316.0" style="-fx-font-size: 36px; -fx-font-family: Times New Roman; -fx-text-fill: #D3BA6D;" text="LODGIFY" textFill="#d3ba6d">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font></Label>
+    </HBox>
+
+    <!-- Main Menu Section -->
+    <GridPane alignment="CENTER" hgap="30" layoutX="0" layoutY="150" prefWidth="1400.0" vgap="20">
+        <!-- Manage Menu Button -->
+        <Button fx:id="add" onAction="#addItem" prefHeight="80" prefWidth="350" style="-fx-font-size: 20px; -fx-background-color: #D6D6D6; -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #333333;" text="Add Order Item" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+        <!-- Display Menu Button -->
+        <Button fx:id="update" onAction="#updateItem" prefHeight="80" prefWidth="350" style="-fx-font-size: 20px; -fx-background-color: rgba(255, 255, 255,  #D6D6D60.8); -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #333333;" text="Update Order" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Place Order Button -->
+        <Button fx:id="delete" onAction="#deleteItem" prefHeight="80" prefWidth="350" style="-fx-font-size: 20px; -fx-background-color: #D6D6D6; -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #333333;" text="Delete Order Item" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+        <!-- Display Previous Orders Button -->
+        <Button fx:id="view" onAction="#display" prefHeight="80" prefWidth="350" style="-fx-font-size: 20px; -fx-background-color: #D6D6D6; -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #333333;" text="View Order " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   
+           <!-- Exit Button -->
+        <Button fx:id="bill" onAction="#viewBill" prefHeight="80" prefWidth="350" style="-fx-font-size: 20px; -fx-background-color: #D6D6D6; -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #333333;" text="View Bill" GridPane.rowIndex="2" />
+        <Button fx:id="place" onAction="#placeOrder" prefHeight="80" prefWidth="351.0" style="-fx-font-size: 20px; -fx-text-fill: #333333; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #D6D6D6; -fx-border-color: #cccccc;" text="Place Order" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         <ColumnConstraints />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+   <Button fx:id="exitButton" layoutX="533.0" layoutY="463.0" onAction="#exit" prefHeight="68.0" prefWidth="307.0" style="-fx-font-size: 20px; -fx-background-color: #D72638; -fx-text-fill: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Exit" />
+</AnchorPane>
